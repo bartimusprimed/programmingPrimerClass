@@ -12,18 +12,28 @@
 
 # Platform Components
 
+# Car
     # Chasis
+        # Suspension
+        # Wheels
         # Body
             # Door
             # Hood
-        # Chair
-            # Seatbelt
-        # Instrument Panel
-            # Gas Gauge
-            # Speedometer
-                # Max Speed
-                # Min Speed
+            # Chair
+                # Seatbelt
+            # Instrument Panel
+                # Gauges
+                    # Gas
+                    # Speedometer
+                        # Max Speed
+                        # Min Speed
     # DriveTrain
+        # Control
+            # Steering Wheel
+                # Horn
+                # Key
+            # Accelerator
+            # Brake
         # Engine
             # Fuel Type
             # On/Off
@@ -31,12 +41,7 @@
             # Gear
                 # Park
                 # Drive
-        # Control
-            # Steering Wheel
-                # Horn
-                # Key
-            # Accelerator
-            # Brake
+
 
 # We Will set our project up, in a similar way to this layout.
 
