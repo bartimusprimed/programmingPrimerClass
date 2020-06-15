@@ -1,6 +1,6 @@
 class Speedometer:
     
-    def __init__(self, min_speed, max_speed):
+    def __init__(self, min_speed=0, max_speed=60):
         self.min = min_speed
         self.max = max_speed
         self.current = 0

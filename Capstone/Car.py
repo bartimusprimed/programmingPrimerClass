@@ -1,8 +1,16 @@
+# This is the class that builds the car, it takes all the components we built and gives us a functioning vehicle.
+from Chasis import Create_Chasis
+from Drivetrain import Create_Drivetrain
+
+# A Factory Method to create a car
+def Create_Default_Car():
+    return Car()
+
 class Car:
 
-    def __init__(self, chasis=None, drivetrain=None):
-        self.chasis = chasis
-        self.drivetrain = drivetrain
+    def __init__(self):
+        self.chasis = Create_Chasis()
+        self.drivetrain = Create_Drivetrain()
 
     def turnOn(self):
         # Check Key
@@ -32,4 +40,7 @@ class Car:
 
 
 if __name__ == "__main__":
-    car = Car()
+    car = Create_Default_Car()
+    print(car)
+    print(car.chasis.body.instrumentpanel.gas.capacity)
+    print(car.drivetrain)

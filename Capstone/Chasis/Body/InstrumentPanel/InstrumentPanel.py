@@ -1,7 +1,9 @@
+from .Gauges import Create_Gauge_Gas, Create_Gauge_Speedometer
+
 class InstrumentPanel:
-    def __init__(self, gasGauge=None, speedometerGauge=None):
-        self.gas = gasGauge    
-        self.speedometer = speedometerGauge
+    def __init__(self):
+        self.gas = Create_Gauge_Gas()   
+        self.speedometer = Create_Gauge_Speedometer()
     
     def linkGasGauge(self, gasGauge):
         self.gas = gasGauge
