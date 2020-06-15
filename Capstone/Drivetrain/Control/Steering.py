@@ -16,7 +16,7 @@ class Steering:
 
     def turn(self, direction):
         # Handle turning edge condition right
-        print("Turning {0}".format(direction))
+        print(direction)
         if direction == Turn.RIGHT and self.current_direction == Direction.WEST:
             self.current_direction = Direction(0)
         # Handle turning edge condition left
@@ -24,6 +24,7 @@ class Steering:
             self.current_direction = Direction(3)
         else:
             self.current_direction = Direction(self.current_direction.value + direction.value)
+        print("Car is now facing: {}".format(self.current_direction))
         return self.current_direction
 
 if __name__ == "__main__":

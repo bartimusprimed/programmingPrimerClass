@@ -38,6 +38,12 @@ class Car:
         # You can implement this if you want
         pass
 
+    def turn_left(self):
+        self.drivetrain.steering_wheel.turn(LEFT)
+
+    def turn_right(self):
+        self.drivetrain.steering_wheel.turn(RIGHT)
+
 
 if __name__ == "__main__":
     car = Create_Default_Car()
@@ -47,7 +53,7 @@ if __name__ == "__main__":
     car.chasis.body.chair.buckleSeatBelt()
     print(car.chasis.body.chair.buckled)
     for x in range(0,10):
-        print(car.drivetrain.steering_wheel.turn(LEFT))
+        print(car.turn_left())
     for x in range(0, 10):
-        print(car.drivetrain.steering_wheel.turn(RIGHT))
+        print(car.turn_right())
     print(car.drivetrain)
