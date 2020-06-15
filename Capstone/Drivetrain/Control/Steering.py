@@ -1,29 +1,13 @@
 # Lets use an enum, not talked about in the powerpoint, but we will explain it in the class
 from enum import Enum
-
-class Turn(Enum):
-    LEFT = -1
-    RIGHT = 1
-
-    def describe(self):
-        return self.name, self.value
-
-class Direction(Enum):
-    NORTH = 0
-    EAST = 1
-    SOUTH = 2
-    WEST = 3
-
-    def describe(self):
-        return self.name, self.value
-    
-    def __str__(self):
-        return 'Currently facing: {0}'.format(self.value)
+from ..Turn import Turn
+from ..Direction import Direction
 
 class Steering:
 
     def __init__(self,  initial_direction=Direction.NORTH):
         self.current_direction = initial_direction
+        self.turn_options = Turn
         # Center will be 0, left will be -90 and right will be 90
 
     # We can use the __str__ method overwrite to make a default print statement
