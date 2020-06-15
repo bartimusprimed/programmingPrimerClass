@@ -10,3 +10,11 @@ class Drivetrain:
         self.steering_wheel = Create_Steering_Wheel()
         self.engine = Create_Engine()
         self.transmission = Create_Transmission()
+
+    def speed_up(self, speed):
+        self.brake.release()
+        self.accelerator.push()
+    
+    def slow_down(self, speed):
+        self.accelerator.release()
+        self.brake.push()
