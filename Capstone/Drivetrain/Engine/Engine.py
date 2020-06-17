@@ -1,4 +1,6 @@
-# Placeholder
+### This is the engine class, the only things referenced outside this class is the fuel_tank and transmission, which is needed to function properly. ###
+### It can still be created by itself, but it will check to ensure those dependencies exist before attempting to use them ###
+
 class Engine:
     def __init__(self):
         self.cylinder_count = 4

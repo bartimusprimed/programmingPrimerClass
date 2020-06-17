@@ -1,5 +1,4 @@
-# Lets use an enum, not talked about in the powerpoint, but we will explain it in the class
-from enum import Enum
+
 from ..Turn import Turn
 from ..Direction import Direction
 
