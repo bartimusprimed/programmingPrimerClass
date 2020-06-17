@@ -8,6 +8,25 @@ class Engine:
         self.fuel_tank = None
         self.transmission = None
         
+    def __str__(self):
+        engine_status = "off"
+        if self.is_on:
+            engine_status = "running"
+
+        return "Engine Cylinder Count {}, Engine is currently {}, Engine current RPMS: {}, Engine Fuel Level {}, Engine Speed {}".format(
+                self.cylinder_count,
+                engine_status,
+                self.current_rpm,
+                self.fuel_tank.level,
+                self.transmission.current_speed
+            )
+
+    def start_engine(self):
+        self.is_on = True
+
+    def stop_engine(self):
+        self.is_on = False
+
     def accelerate(self):
         if (self.fuel_tank is None or self.transmission is None):
             assert("Ensure you connected a fuel tank and transmission to the engine")
@@ -21,10 +40,7 @@ class Engine:
         if (self.fuel_tank is None):
             assert("You have no fuel tank")
             return
-        if(self.fuel_tank.level > 0):
-            self.fuel_tank -= 1
-        else:
-            assert("Out of gas")
+        self.fuel_tank.use_gas()
 
     def brake(self):
         if (self.fuel_tank is None or self.transmission is None):

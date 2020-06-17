@@ -4,12 +4,6 @@ class InstrumentPanel:
     def __init__(self):
         self.gas = Create_Gauge_Gas()   
         self.speedometer = Create_Gauge_Speedometer()
-    
-    def linkGasGauge(self, gasGauge):
-        self.gas = gasGauge
-
-    def linkSpeedometer(self, speedometer):
-        self.speedometer = speedometer
 
     def accelerate(self):
         self.speedometer.accelerate()

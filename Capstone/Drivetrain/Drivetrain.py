@@ -14,7 +14,12 @@ class Drivetrain:
     def speed_up(self, speed):
         self.brake.release()
         self.accelerator.push()
+        self.engine.accelerate()
     
     def slow_down(self, speed):
         self.accelerator.release()
         self.brake.push()
+        self.engine.brake()
+
+    def __str__(self):
+        return str(self.engine)

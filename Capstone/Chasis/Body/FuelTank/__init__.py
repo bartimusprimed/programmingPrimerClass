@@ -1,4 +1,4 @@
 from .FuelTank import FuelTank
 
-def Create_Instrument_Panel():
-    return InstrumentPanel()
+def Create_Fuel_Tank():
+    return FuelTank()
