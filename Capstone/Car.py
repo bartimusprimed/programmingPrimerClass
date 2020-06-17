@@ -1,6 +1,6 @@
 # This is the class that builds the car, it takes all the components we built and gives us a functioning vehicle.
-from Chasis import Create_Chasis
-from Drivetrain import Create_Drivetrain, LEFT, RIGHT
+from .Chasis import Create_Chasis
+from .Drivetrain import Create_Drivetrain, LEFT, RIGHT
 
 # A Factory Method to create a car
 def Create_Default_Car():
