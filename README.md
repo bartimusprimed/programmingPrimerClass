@@ -1,6 +1,8 @@
 ### programmingPrimerClass
 This course has a powerpoint slide show to go with it.
 
+The main code is under the Capstone/Car.py file, the other folders are mostly for code used in the powerpoint.
+
 
 ## Class goals
 #### How to break down a problem.
