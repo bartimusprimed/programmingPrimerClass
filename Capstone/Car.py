@@ -1,5 +1,7 @@
-# DISCLAIMER: This file is heavily commented, as you go deeper in the code, there will be less "explanation comments" as the topic will probably be covered in this file.
-# This actually has way to many comments, and hinders readability. I might actually upload a non commented version, so you can see the code un-defiled.
+# DISCLAIMER: This file is heavily commented, as you go deeper in the code, there will be less 
+# "explanation comments" as the topic will probably be covered in this file.
+# This actually has way to many comments, and hinders readability. I might actually upload a 
+# non commented version, so you can see the code un-defiled.
 
 # This is the class that builds the car, it takes all the components we defined and gives us a functioning vehicle.
 
@@ -19,12 +21,13 @@ def Create_Default_Car():
 # You open the box, it has a bunch of other things that go together.
 # Example: TV Box, inside of it is a TV, a Remote, a Power Cord, a Unuseful guide that most people don't read...
 
-# The car class has: A Chasis (which gives us most of our functionality that the user cares about), and a Drivetrain (which does most of the heavy lifting)
-# This might be close to what programmers call a "Frontend" and a "Backend", respectively.
+# The car class has: A Chasis (which gives us most of our functionality that the user cares about), and a Drivetrain 
+# (which does most of the heavy lifting) This might be close to what programmers 
+# call a "Frontend" and a "Backend", respectively.
 class Car:
 
-    # Python uses a special method __init__(self) that is used when creating a version of this class, as seen in the Create_Default_Car function on line 10.
-    # We don't pass any parameters to this, but we could if we wanted.
+    # Python uses a special method __init__(self) that is used when creating a version of this class, as seen in the Create_Default_Car 
+    # function on line 10. We don't pass any parameters to this, but we could if we wanted.
     # It would look something like def __init__(self, parameter1, parameter2)
     # If that was the case then you would "Instantiate" the class like Car("Blue", "4WD")
 
@@ -46,14 +49,14 @@ class Car:
         self.drivetrain.engine.connect_transmission(self.drivetrain.transmission)
 
     def turn_on(self):
-        # This is what can be known as a "wrapper" function. Essentially we add in some useful information and just call the engine's start_engine function.
-        # We are "wrapping" the start_engine() function, and adding in our debug comments.
+        # This is what can be known as a "wrapper" function. Essentially we add in some useful information and just call the 
+        # engine's start_engine function. We are "wrapping" the start_engine() function, and adding in our debug comments.
         print("Attempting to start car")
         self.drivetrain.engine.start_engine()
 
     def turn_off(self):
-        # Another wrapping function. Security wise, these wrapper functions also provide the user with less information. If the function took a parameter, we could use this
-        # wrapper function to check the input before passing it to our engine.
+        # Another wrapping function. Security wise, these wrapper functions also provide the user with less information. 
+        # If the function took a parameter, we could use this wrapper function to check the input before passing it to our engine.
         # We could also call other things, like checking to ensure the car is in park before turning it off.
         print("Killing the engine")
         self.drivetrain.engine.stop_engine()
@@ -76,13 +79,13 @@ class Car:
         pass
 
     def turn_left(self):
-        # Here we call the steering_wheel's turn() function, and we pass it a value from the turn enum that we create in the Turn.py file.
-        # Please look at the Drivetrain/Turn.py file for more information.
+        # Here we call the steering_wheel's turn() function, and we pass it a value from the turn enum that we create 
+        # in the Turn.py file. Please look at the Drivetrain/Turn.py file for more information.
         self.drivetrain.steering_wheel.turn(LEFT)
 
     def turn_right(self):
-        # Here we call the steering_wheel's turn() function, and we pass it a value from the turn enum that we create in the Turn.py file.
-        # Please look at the Drivetrain/Turn.py file for more information.
+        # Here we call the steering_wheel's turn() function, and we pass it a value from the turn enum that we create 
+        # in the Turn.py file. Please look at the Drivetrain/Turn.py file for more information.
         self.drivetrain.steering_wheel.turn(RIGHT)
 
     def __str__(self):
@@ -98,8 +101,8 @@ if __name__ == "__main__":
     car = Create_Default_Car()
     
 
-    # I commented this out, since it prints a lot of output. It essentially just checks to ensure that the times when you make 4 turns, you end up facing the same direction.
-    # This is what is sometimes known as an "edge case", it might not happen, but it could.
+    # I commented this out, since it prints a lot of output. It essentially just checks to ensure that the times when you make 4 turns, 
+    # you end up facing the same direction. This is what is sometimes known as an "edge case", it might not happen, but it could.
     # Test turning
     #for x in range(0,10):
     #    print(car.turn_left())
