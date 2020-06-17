@@ -1,13 +1,13 @@
-# programmingPrimerClass
-### This course has a powerpoint slide show to go with it.
+### programmingPrimerClass
+This course has a powerpoint slide show to go with it.
 
 
-# Class goals
-### How to break down a problem.
-### How to manage dependencies.
-### How to interface with APIs.
-### How to structure a project.
-### Writing clean and concise code, while still being easily extensible.
+## Class goals
+#### How to break down a problem.
+#### How to manage dependencies.
+#### How to interface with APIs.
+#### How to structure a project.
+#### Writing clean and concise code, while still being easily extensible.
 
 
 ### DISCLAIMER: 
@@ -21,4 +21,4 @@ Like many other intros I know I could had used a more "useful" capstone, but I f
 I am still adding to the project as it is a work in progress, this includes eventually having 100% commented code, also adding in some test suite. Finally, I built it in a way that if I ever do a Machine Learning course, with some small code additions you could easily teach the virtual car how to drive.
 
 I hope you enjoy!
-Bartimus
+### Bartimus
